@@ -6,9 +6,10 @@ import Avatar from "./Avatar";
 function CreateCard(contact){
 return(
   <Card
+key={contact.id}
 name={contact.name}
 img={contact.imgURL}
-tel={contact.tel}
+tel={contact.phone}
 email={contact.email}
 />
 );
@@ -16,7 +17,7 @@ email={contact.email}
 function App() {
   return (
     <div>
-      <h1 class="heading">My Contacts</h1>
+      <h1 className ="heading">My Contacts</h1>
       <Avatar img="https://imgs.search.brave.com/PJdUUHZfMBXLe989mjZtkFli54PbGdWCi5mVwOrd6RM/rs:fit:371:371:1/g:ce/aHR0cHM6Ly9uYXNl/ZW0wMTAuZ2l0aHVi/LmlvL0NWL2ltYWdl/L2ZhaGVlbS5wbmc" />
       {contacts.map(CreateCard)}
       {/* <Card 
